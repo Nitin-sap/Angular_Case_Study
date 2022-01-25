@@ -1,0 +1,19 @@
+<section class="grid">
+  <section class="timer-count">
+    <app-timer-count [count]="count"></app-timer-count>
+  </section>
+  <section class="timer-input">
+    <app-timer-limit-input
+      (counter)="setCounterValue($event)"
+      (timestampData)="setTimestampValue($event)"
+    ></app-timer-limit-input>
+  </section>
+  <section class="timestamp-log">
+    <app-timestamp-logs [timestamp]="timestamp"></app-timestamp-logs>
+  </section>
+  <section class="start-pause-logs">
+    <app-start-pause-logs
+      [startPauseCount]="startPauseCount"
+    ></app-start-pause-logs>
+  </section>
+</section>

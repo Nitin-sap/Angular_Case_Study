@@ -1,0 +1,40 @@
+<header class="grid-list-container">
+  <section class="btn-group">
+    <button
+      class="button"
+      [ngClass]="type == 'grid-view' ? 'active-btn' : ''"
+      (click)="type = 'grid-view'"
+    >
+      GRID VIEW
+    </button>
+    <button
+      class="button"
+      [ngClass]="type == 'list-view' ? 'active-btn' : ''"
+      (click)="type = 'list-view'"
+    >
+      LIST VIEW
+    </button>
+  </section>
+  <section class="filter">
+    <select name="price" id="price" (change)="selectPriceInterval($event)">
+      <option value="all" selected>All Data</option>
+      <option value="LTE_5K">$0 -$5000</option>
+      <option value="5K_10K">$5001 - $10000</option>
+      <option value="10K_20K">$10001 - $20000</option>
+      <option value="20K_35K">$20001 - $35000</option>
+      <option value="MT_35K">more than $35000</option>
+    </select>
+  </section>
+</header>
+<section class="container">
+  <section [ngClass]="type">
+    <article class="cards" *ngFor="let item of filteredArr; let i = index">
+      <img src="../../../assets/test-img.jpg" alt="Product images" />
+      <ul>
+        <li class="name">{{ item.name }}</li>
+        <li class="price">${{ item.price }}</li>
+        <li>{{ item.description }}</li>
+      </ul>
+    </article>
+  </section>
+</section>

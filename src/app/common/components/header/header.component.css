@@ -1,0 +1,28 @@
+header ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #74b816;
+}
+
+ul li a:hover {
+  color: white;
+  transform: scale(1.2);
+  background-color: #5c940d;
+  cursor: pointer;
+}
+
+ul li a.active {
+  color: white;
+  transform: scale(1.2);
+  background-color: #5c940d;
+}
+
+ul li a {
+  color: #ffffff;
+  padding: 20px;
+  display: inline-block;
+  text-transform: capitalize;
+  text-decoration: none;
+}

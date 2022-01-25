@@ -1,0 +1,78 @@
+header {
+  display: flex;
+  gap: 40px;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 50px;
+}
+
+.container section {
+  display: grid;
+  gap: 25px;
+}
+
+.grid-view {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.list-view {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.list-view .cards {
+  display: flex;
+  gap: 15px;
+}
+
+article.cards {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+  background-color: white;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 15px;
+  padding: 20px;
+}
+
+li.name {
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+li.price {
+  font-style: italic;
+  font-size: 18px;
+}
+
+.btn-group .button {
+  margin: 20px 0px;
+  background-color: #4caf50; /* Green */
+  border: 1px solid green;
+  color: white;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.btn-group .button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+.active-btn {
+  background-color: #3e8e41 !important;
+}
+
+select {
+  height: 37px;
+}

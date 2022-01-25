@@ -1,0 +1,9 @@
+<section class="dynamic-box" (click)="listenClick($event)">
+  <section class="scrollable" *ngFor="let count of container; let i = index">
+    <h5>Card {{ count }}</h5>
+    <button [value]="count">Click Me</button>
+  </section>
+</section>
+<section class="loading-container">
+  <div class="loader" *ngIf="loader"></div>
+</section>

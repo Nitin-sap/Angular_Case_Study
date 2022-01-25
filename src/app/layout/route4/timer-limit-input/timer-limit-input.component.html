@@ -1,0 +1,28 @@
+<section class="timer-inner">
+  <div class="input-timer">
+    <form
+      class="timer-form"
+      #timerForm="ngForm"
+      (ngSubmit)="startPauseTimer($event, timerForm)"
+    >
+      <div class="form-fields">
+        <label for="timer-limit">Enter Timer Limit</label>
+        <input type="number" id="timer-limit" name="timerLimit" ngModel />
+      </div>
+      <div class="form-action">
+        <button type="submit" [disabled]="startPauseBtnDisabled">
+          Start / Pause
+        </button>
+        <button type="reset" (click)="resetTimer()">Reset</button>
+      </div>
+    </form>
+    <ul class="logs">
+      <li
+        class="timestamp"
+        *ngFor="let interval of pausedTimeInterval; let i = index"
+      >
+        paused at {{ interval }}
+      </li>
+    </ul>
+  </div>
+</section>

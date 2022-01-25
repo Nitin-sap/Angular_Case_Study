@@ -1,0 +1,21 @@
+<section class="container">
+  <table>
+    <thead>
+      <tr>
+        <th *ngFor="let head of headers" (click)="tableSorting(head)">
+          {{ head }}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="
+          let data of dataArray | sortTableData: field:order:originalArr;
+          let i = index
+        "
+      >
+        <td *ngFor="let head of headers">{{ data[head] }}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>

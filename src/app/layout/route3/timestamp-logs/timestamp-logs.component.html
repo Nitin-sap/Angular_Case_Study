@@ -1,0 +1,7 @@
+<section class="timer-inner">
+  <ul class="logs">
+    <li class="timestamp" *ngFor="let value of timestamp; let i = index">
+      {{ value.type }} at {{ value.datetime | date: "dd-MM-yyyy hh:mm:ss a" }}
+    </li>
+  </ul>
+</section>
